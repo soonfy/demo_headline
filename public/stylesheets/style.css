@@ -1,0 +1,100 @@
+body {
+  color: #333;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 750px;
+  min-width: 320px;
+  padding: 0;
+  width: 100%;
+}
+
+h1 {
+  border-bottom: 2px solid #999;
+  display: inline-block;
+  left: 40px;
+  position: relative;
+}
+
+a {
+  color: #999;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.user {
+  height: 10px;
+  padding: 20px;
+}
+
+#menu {
+  display: inline-block;
+}
+
+#menu .name:after {
+  content: ' -';
+}
+
+#menu a {
+  margin-left: 5px;
+}
+
+.infos {
+  margin-top: 40px;
+  padding: 10px 10px 40px 10px;
+}
+
+.news {
+  border-bottom: 2px solid #999;
+  padding: 10px 10px 20px;
+}
+
+.title {
+  position: relative;
+  vertical-align: baseline;
+}
+
+.title a, .title h3 {
+  float: left;
+  padding-right: 20px;
+}
+
+.title + div{
+  clear: both;
+}
+
+.news h3 a {
+  color: #222;
+  display: inline-block;
+  font-size: 20px;
+  height: 20px;
+  line-height: 20px;
+  width: 100%;
+}
+
+.content {
+  color: #999;
+  padding: 10px 0 20px 0;
+}
+
+.tag {
+  color: #c5c5c5;
+  height: 18px;
+  line-height: 18px;
+}
+
+.left {
+  float: left;
+  padding-right: 25px;
+}
+
+.right {
+  float: right;
+  padding-left: 5px;
+}
+
+.loading {
+  text-align: center;
+}
+#loading {
+  margin: 0 auto 40px;
+}

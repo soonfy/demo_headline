@@ -1,0 +1,8 @@
+<% if(locals.messages){ %>
+  <% messages.map(function(message) { %>
+    <p class="<%= message.type %>"><%= message.text %></p>
+  <% }) %>
+  <% removeMessages() %>
+<% }else{ %>
+  <p>no locals</p>
+<% } %>

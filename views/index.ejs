@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css'>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script src="/javascripts/loading.js"></script>
+  <script src="/holderjs/holder.js"></script>
+</head>
+
+<body>
+
+  <% include menu %>
+
+    <h1><a target="_blank" href="http://www.toutiao.com/">头条热文</a></h1>
+
+    <div id="news" class="infos">
+      <% news.map(function(_news){ %>
+        <div class="news">
+          <div class="title">
+            <a target="_blank" href="<%= _news.uri %>">
+              <img src="<%= _news.img %>" alt="<%= _news.title %>" title="<%= _news.content %>">
+              </a>
+
+            <h3>
+              <a target="_blank" href="<%= _news.uri %>">
+                <%= _news.title %>
+              </a>
+            </h3>
+          </div>
+
+          <div>
+            <p class="content">
+              <%= _news.content %>
+            </p>
+          </div>
+          <p class="tag">
+            <span class="left"><a target="_blank" href="<%= _news.userUri %>"><%= _news.userName %></a></span>
+            <span class="left"><%= _news.tag %></span>
+            <span class="right"><%= _news.comment %>&nbsp;评论</span>
+          </p>
+        </div>
+        <% }) %>
+    </div>
+
+    <div class="loading">
+      <img id="loading" src="/images/loading.gif" alt="">
+    </div>
+
+</body>
+
+</html>

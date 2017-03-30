@@ -1,0 +1,15 @@
+<div class="user">
+  <% if(locals.user){ %>
+    <div id="menu" class="right">
+      <!--<img src="holder.js/30x30">-->
+      <span class="name"><%= user.name %></span>
+      <!--<a href="/users/post.html">发布文章</a>-->
+      <a href="/users/logout.html">退出</a>
+    </div>
+    <% } else{ %>
+      <div id="menu" class="right">
+        <a href="/users/login.html">登录</a>
+        <a href="/users/register.html">注册</a>
+      </div>
+      <% } %>
+</div>

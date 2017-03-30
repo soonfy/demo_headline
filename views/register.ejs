@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+</head>
+
+<body>
+
+  <% include menu %>
+
+    <h2>
+      <%= title %>
+    </h2>
+    <p>注册啦...</p>
+
+    <% include messages %>
+
+      <form action="/users/register.html" method="post">
+        <p><input type="text" name="name" value="" placeholder="用户名"></p>
+        <p><input type="password" name="pass" value="" placeholder="密码"></p>
+        <p><input type="submit" value="注册"></p>
+      </form>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+</head>
+
+<body>
+
+  <% include menu %>
+
+    <h1>
+      <%= title %>
+    </h1>
+    <p>发文啦...</p>
+
+    <% include messages %>
+
+      <form action="/users/post.html" method="post">
+        <p><input type="text" name="title" value="" placeholder="标题"></p>
+        <textarea name="content" placeholder="内容"></textarea>
+        <p><input type="submit" value="发布"></p>
+      </form>
+
+</body>
+
+</html>
