@@ -16,9 +16,7 @@ const user = require('./controllers/user');
 const message = require('./controllers/message');
 
 let uri = `mongodb://localhost/headline`;
-// connect mongodb
-mongoose.connect(uri);
-// debug
+// mongoose.connect(uri);
 mongoose.set('debug', true);
 
 var app = express();
@@ -42,10 +40,10 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   cookie: {},
-  store: new mongoStore({
-    url: uri,
-    collections: 'sessions'
-  })
+  // store: new mongoStore({
+  //   url: uri,
+  //   collections: 'sessions'
+  // })
 }))
 
 app.use(message);
