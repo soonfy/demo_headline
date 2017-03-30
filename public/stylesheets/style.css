@@ -94,6 +94,7 @@ a {
 
 .loading {
   text-align: center;
+  cursor: pointer;
 }
 #loading {
   margin: 0 auto 40px;
